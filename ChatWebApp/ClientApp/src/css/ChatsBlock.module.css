@@ -1,0 +1,84 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  color: #222222;
+}
+.container .header {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  padding: 0 33px;
+  width: 100%;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+  z-index: 2;
+  background-color: #496ADE;
+}
+.container .header .options {
+  font-size: 30px;
+  color: #FFFFFF;
+  margin-right: 25px;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+.container .header .options:hover {
+  color: #D1D0FF;
+}
+.container .header .search {
+  display: flex;
+  padding: 7px 10px;
+  background-color: #EFEFEF;
+  border-radius: 10px;
+  box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
+  flex: 1;
+}
+.container .header .search .text {
+  flex: 1;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+.container .header .search .text::placeholder {
+  color: #5A5A5A;
+}
+.container .header .search .button {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  margin-left: 10px;
+  color: #222222;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+.container .header .search .button[class^="icon-"],
+.container .header .search .button[class*=" icon-"] {
+  font-size: 20px;
+}
+.container .header .search .button:hover {
+  color: #5A5A5A;
+}
+.container .chats_container {
+  overflow-y: auto;
+  flex: 1;
+}
+.container .footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 33px;
+  height: 70px;
+  box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.25);
+  z-index: 2;
+  background-color: #496ADE;
+  color: #FFFFFF;
+}
+.container .footer .add_button {
+  font-size: 32px;
+  color: #FFFFFF;
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+}
+.container .footer .add_button:hover {
+  color: #D1D0FF;
+}
+/*# sourceMappingURL=ChatsBlock.module.css.map */

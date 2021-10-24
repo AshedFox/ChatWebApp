@@ -1,0 +1,165 @@
+@import "variables";
+
+.container{
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+
+  .content{
+    display: flex;
+    flex-direction: column;
+
+    width: 520px;
+    color: @primaryTextColor;
+    font-size: 16px;
+    font-weight: 500;
+
+    .form{
+      display: flex;
+      flex-direction: column;
+
+      margin-top: 120px;
+      margin-bottom: 60px;
+
+      .title{
+        font-size: 36px;
+        font-weight: bold;
+        color: @headerTextColor;
+
+        margin: 0 auto 38px auto;
+      }
+
+      .fields{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 38px;
+
+        outline: none;
+        border:none;
+
+        .input{
+          background-color: @primaryFieldColor;
+          border-radius: 10px;
+          box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
+          height: 50px;
+          padding: 16px;
+
+          outline: none;
+          border:none;
+
+          &:not(:last-child){
+            margin-bottom: 27px;
+          }
+
+          &::placeholder{
+            color: @placeholderColor;
+          }
+        }
+      }
+
+      .links{
+        outline: none;
+        border:none;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .link{
+          font-size: 14px;
+          margin-left: 20px;
+          border-bottom: 1px @primaryTextColor solid;
+
+          transition:
+                  border-bottom-color 0.4s ease,
+                  color 0.4s ease;
+
+          &:hover{
+            color: @primaryColor;
+            border-bottom: 1px @primaryColor solid;
+          }
+        }
+
+        .button{
+          color: @secondaryTextColor;
+          background-color: @primaryColor;
+          border-radius: 10px;
+
+          width: 315px;
+          height: 54px;
+
+          outline: none;
+          border:none;
+
+          font-size: 20px;
+          font-weight: 600;
+
+          cursor: pointer;
+          box-shadow: 2px 4px 4px 0 transparent;
+          transition: box-shadow 0.4s ease;
+
+          &:hover{
+            box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
+          }
+        }
+      }
+    }
+
+    .separator{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 25px;
+
+      .line{
+        background-color: #222222;
+        height: 1px;
+        flex:3;
+      }
+
+      .text{
+        font-size: 14px;
+        margin: 0 5px;
+      }
+    }
+
+    .additional_auth{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      color: @secondaryTextColor;
+
+      .button{
+        width: 250px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        outline: none;
+        border:none;
+
+        font-size: 18px;
+        font-weight: 600;
+        border-radius: 10px;
+
+        cursor: pointer;
+        box-shadow: 2px 4px 4px 0 transparent;
+        transition: box-shadow 0.4s ease;
+
+        &:hover{
+          box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
+        }
+      }
+
+      .google_button{
+        background-color: #F54C27;
+      }
+
+      .vk_button{
+        background-color: #2787F5;
+      }
+    }
+  }
+}

@@ -1,0 +1,121 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.container .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 0 50px;
+  width: 100%;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+  z-index: 2;
+  background-color: #496ADE;
+  color: #FFFFFF;
+}
+.container .header .back_arrow {
+  font-size: 27px;
+  transform: rotate(180deg);
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+.container .header .back_arrow:hover {
+  color: #D1D0FF;
+}
+.container .header .name {
+  font-size: 24px;
+  font-weight: 700;
+}
+.container .header .more {
+  font-size: 27px;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+.container .header .more:hover {
+  color: #D1D0FF;
+}
+.container .messages_container {
+  width: 100%;
+  overflow-y: auto;
+  flex: 1;
+  padding: 25px 80px;
+}
+.container .footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 50px;
+  width: 100%;
+  box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.25);
+  z-index: 2;
+  background-color: #496ADE;
+  color: #FFFFFF;
+}
+.container .footer .attachments_container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 70px;
+  width: 100%;
+}
+.container .footer .attachments_container .attachments {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  overflow-x: auto;
+  width: 100%;
+}
+.container .footer .attachments_container .attachments > *:not(:last-child) {
+  margin-right: 10px;
+}
+.container .footer .message_form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  width: 100%;
+}
+.container .footer .message_form .add_attachment {
+  font-size: 27px;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+.container .footer .message_form .add_attachment:hover {
+  color: #D1D0FF;
+}
+.container .footer .message_form .new_message {
+  display: flex;
+  padding: 7px 10px;
+  background-color: #EFEFEF;
+  border-radius: 10px;
+  box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
+  flex: 1;
+  margin: 0 50px;
+  height: 42px;
+  outline: none;
+  border: none;
+  font-size: 13px;
+  color: #222222;
+  white-space: break-spaces;
+  resize: none;
+}
+.container .footer .message_form .new_message::placeholder {
+  font-size: 13px;
+  color: #5A5A5A;
+}
+.container .footer .message_form .send_button {
+  font-size: 27px;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+  background: none;
+  outline: none;
+  border: none;
+  color: #FFFFFF;
+}
+.container .footer .message_form .send_button:hover {
+  color: #D1D0FF;
+}
+/*# sourceMappingURL=ConversationBlock.module.css.map */

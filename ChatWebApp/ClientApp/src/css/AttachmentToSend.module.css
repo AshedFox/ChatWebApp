@@ -1,0 +1,20 @@
+.container {
+  position: relative;
+  padding: 10px;
+  background: #EFEFEF;
+  border-radius: 10px;
+}
+.container .name {
+  color: #222222;
+}
+.container .remove_button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #222222;
+  cursor: pointer;
+}
+.container .remove_button:hover {
+  color: #5A5A5A;
+}
+/*# sourceMappingURL=AttachmentToSend.module.css.map */

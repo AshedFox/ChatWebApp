@@ -1,0 +1,24 @@
+@import "variables";
+
+.container{
+  position: relative;
+  padding: 10px;
+  background: @primaryFieldColor;
+  border-radius: 10px;
+
+  .name{
+    color: @primaryTextColor;
+  }
+  .remove_button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: @primaryTextColor;
+
+    cursor: pointer;
+
+    &:hover{
+      color: @placeholderColor;
+    }
+  }
+}

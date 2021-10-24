@@ -1,0 +1,73 @@
+.container {
+  display: flex;
+  min-height: 64px;
+  color: #222222;
+}
+.container:not(:last-child) {
+  margin-bottom: 20px;
+}
+.container .avatar {
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  overflow: hidden;
+  margin-right: 30px;
+}
+.container .avatar .image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+.container .info .header {
+  display: flex;
+  align-items: center;
+}
+.container .info .header .sender {
+  font-size: 16px;
+  margin-right: 10px;
+}
+.container .info .header .datetime {
+  font-size: 13px;
+  color: #5A5A5A;
+}
+.container .info .content_container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  background-color: #EFEFEF;
+  border-radius: 10px;
+  box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.container .info .content_container[class*="yours"] {
+  background-color: #D1D0FF;
+}
+.container .info .content_container .text {
+  font-size: 13px;
+  white-space: break-spaces;
+}
+.container .info .content_container .attachments_container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.container .info .content_container .attachments_container .file {
+  display: flex;
+  align-items: center;
+  transition: border-bottom-color 0.3s ease-in-out;
+  border-bottom: 1px solid transparent;
+  cursor: pointer;
+  font-size: 16px;
+}
+.container .info .content_container .attachments_container .file:hover {
+  border-bottom: 1px solid #222222;
+}
+.container .info .content_container .attachments_container > *:not(:last-child) {
+  margin-bottom: 15px;
+}
+/*# sourceMappingURL=Message.module.css.map */
