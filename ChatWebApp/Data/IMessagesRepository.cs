@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Backend.Api.DTOs;
-using Backend.Api.Models;
+using ChatWebApp.DTOs;
+using ChatWebApp.Models;
 
-namespace Backend.Api.Data
+namespace ChatWebApp.Data
 {
     public interface IMessagesRepository
     {

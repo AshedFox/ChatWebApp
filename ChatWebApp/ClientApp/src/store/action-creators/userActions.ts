@@ -11,7 +11,7 @@ const requestAuth = (loginData:LoginDTO) => {
         dispatch({type: UserActionType.AuthRequest})
         try {
             const response = await fetch(
-                appSettings.api.baseUrl + '/account/authorize',
+                appSettings.apiUrl + '/account/authorize',
                 {
                     method: "POST",
                     headers: {
@@ -37,7 +37,7 @@ const requestReg = (userData:UserDTO) => {
         dispatch({type: UserActionType.RegRequest})
         try {
             const response = await fetch(
-                appSettings.api.baseUrl + '/account/register',
+                appSettings.apiUrl + '/account/register',
                 {
                     method: "POST",
                     headers: {

@@ -1,7 +1,7 @@
 ﻿using System.Text;
 using Microsoft.IdentityModel.Tokens;
 
-namespace Backend.Api.Auth
+namespace ChatWebApp.Auth
 {
     public class AuthOptions
     {

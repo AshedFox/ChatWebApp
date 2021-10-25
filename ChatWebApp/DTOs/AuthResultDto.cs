@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Backend.Api.DTOs
+namespace ChatWebApp.DTOs
 {
     public record AuthResultDto(UserDto User, string AccessToken, DateTime ValidTo);
 }

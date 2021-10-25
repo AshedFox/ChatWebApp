@@ -32,7 +32,7 @@ const SignalRProvider:FC<DispatchProps> =
 
     if (connection === undefined) {
         const connection = new HubConnectionBuilder()
-            .withUrl(appSettings.api.baseUrl + "/hub/main", {
+            .withUrl(appSettings.hubUrl + "/main", {
                 accessTokenFactory: () => accessToken as string,
             })
             .configureLogging(LogLevel.Information)

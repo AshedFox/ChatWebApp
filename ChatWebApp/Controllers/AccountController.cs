@@ -6,18 +6,18 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
-using Backend.Api.Auth;
-using Backend.Api.Data;
-using Backend.Api.DTOs;
-using Backend.Api.Models;
+using ChatWebApp.Auth;
+using ChatWebApp.Data;
+using ChatWebApp.DTOs;
+using ChatWebApp.Models;
 using Isopoh.Cryptography.Argon2;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 
-namespace Backend.Api.Controllers
+namespace ChatWebApp.Controllers
 {
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class AccountController : ControllerBase
     {

@@ -1,7 +1,6 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
 
-namespace Backend.Api.Models
+namespace ChatWebApp.Models
 {
     public class File
     {

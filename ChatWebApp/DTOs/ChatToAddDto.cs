@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Backend.Api.DTOs
+namespace ChatWebApp.DTOs
 {
     public record ChatToAddDto(string Name, Guid ImageFileId);
 }

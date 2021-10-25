@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Backend.Api.DTOs;
-using Backend.Api.Models;
+using ChatWebApp.DTOs;
+using ChatWebApp.Models;
 using Dapper;
 using Npgsql;
 
-namespace Backend.Api.Data
+namespace ChatWebApp.Data
 {
     public class ChatsRepository : IChatsRepository
     {

@@ -12,7 +12,7 @@ const requestGet = (chatId:string, limit?: number) => {
         dispatch({type: MessagesActionType.GetRequest});
         const headersInit = new Headers(authHeader());
 
-        let query = appSettings.api.baseUrl + `/messages?chatId=${chatId}`;
+        let query = appSettings.apiUrl + `/messages?chatId=${chatId}`;
         if (limit) {
             query += `&limit=${limit}`;
         }
@@ -39,7 +39,7 @@ const requestGetSince = (chatId:string, lastMessageId: string, limit?: number) =
         dispatch({type: MessagesActionType.GetSinceRequest});
         const headersInit = new Headers(authHeader());
 
-        let query = appSettings.api.baseUrl + `/messages?chatId=${chatId}&lastMessageId=${lastMessageId}`;
+        let query = appSettings.apiUrl + `/messages?chatId=${chatId}&lastMessageId=${lastMessageId}`;
         if (limit) {
             query += `&limit=${limit}`;
         }
@@ -67,7 +67,7 @@ const requestPost = (messageData:MessageDTO) => {
         const headersInit = new Headers(authHeader());
         headersInit.append("Content-Type", "application/json");
 
-        let query = appSettings.api.baseUrl + `/messages`;
+        let query = appSettings.apiUrl + `/messages`;
         await fetch(
             query,
             {

@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Threading.Tasks;
 using AutoMapper;
-using Backend.Api.Data;
-using Backend.Api.DTOs;
-using Backend.Api.Models;
-using Dapper;
+using ChatWebApp.Data;
+using ChatWebApp.DTOs;
+using ChatWebApp.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.SignalR;
 
-namespace Backend.Api.Hubs
+namespace ChatWebApp.Hubs
 {
     [Authorize]
     public class MainHub: Hub<IMainHubClient>, IMainHubServer

@@ -1,8 +1,8 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Threading.Tasks;
-using Backend.Api.Auth;
-using Backend.Api.Data;
-using Backend.Api.Hubs;
+using ChatWebApp.Auth;
+using ChatWebApp.Data;
+using ChatWebApp.Hubs;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -13,7 +13,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 
-namespace Backend.Api
+namespace ChatWebApp
 {
     public class Startup
     {
@@ -55,7 +55,7 @@ namespace Backend.Api
 
                             var path = context.HttpContext.Request.Path;
                             if (!string.IsNullOrEmpty(accessToken) &&
-                                (path.StartsWithSegments("/hub/main")))
+                                path.StartsWithSegments("/hub/main"))
                             {
                                 context.Token = accessToken;
                             }
@@ -65,16 +65,6 @@ namespace Backend.Api
                     };
                 });
 
-
-            services.AddCors(options =>
-            {
-                options.AddPolicy("CustomPolicy", builder =>
-                {
-                    builder.WithOrigins("http://localhost:3000", "https://localhost:3000").AllowCredentials()
-                        .AllowAnyHeader().AllowAnyMethod();
-                });
-            });
-            
             services.AddAutoMapper(typeof(Startup).Assembly); 
             
             services.AddTransient<IMessagesRepository, MessagesRepository>(_ =>
@@ -95,7 +85,7 @@ namespace Backend.Api
             services.AddSpaStaticFiles(configuration => { configuration.RootPath = "ClientApp/build"; });
 
             services.AddSwaggerGen(
-                c => { c.SwaggerDoc("v1", new OpenApiInfo { Title = "Backend.Api", Version = "v1" }); }
+                c => { c.SwaggerDoc("v1", new OpenApiInfo { Title = "ChatWebApp", Version = "v1" }); }
             );
         }
 
@@ -106,7 +96,7 @@ namespace Backend.Api
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Backend.Api v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ChatWebApp v1"));
             }
             
             Dapper.DefaultTypeMap.MatchNamesWithUnderscores = true;
@@ -116,13 +106,9 @@ namespace Backend.Api
             app.UseSpaStaticFiles();
 
             JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
-
-            app.UseCors("CustomPolicy");
             
             app.UseHttpsRedirection();
-
             app.UseRouting();
-            
             app.UseAuthentication();
             app.UseAuthorization();
             
@@ -135,12 +121,10 @@ namespace Backend.Api
             app.UseSpa(spa =>
             {
                 spa.Options.SourcePath = "ClientApp";
-                spa.Options.DevServerPort = 3000;
 
                 if (env.IsDevelopment())
                 {
                     spa.UseReactDevelopmentServer("start");
-                    spa.UseProxyToSpaDevelopmentServer("http://localhost:3000");
                 }
             });
         }

@@ -61,7 +61,7 @@ const ConversationBlock = ({getMessages, unsetCurrentChat}:DispatchProps) => {
 
             if (filesToSend.length > 0) {
                 for (const file of filesToSend) {
-                    let query = appSettings.api.baseUrl + `/files`;
+                    let query = appSettings.apiUrl + `/files`;
 
                     const headersInit = new Headers(authHeader());
                     const formData = new FormData();

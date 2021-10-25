@@ -47,7 +47,7 @@ const AddChatModal = ({isOpen, setIsOpen, postChat}:AddChatProps & DispatchProps
         }
 
         if (chatImage) {
-            let query = appSettings.api.baseUrl + `/files`;
+            let query = appSettings.apiUrl + `/files`;
             const headersInit = new Headers(authHeader());
             const formData = new FormData();
             formData.append("file", chatImage);

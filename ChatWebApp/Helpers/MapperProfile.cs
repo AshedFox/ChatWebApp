@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using Backend.Api.DTOs;
-using Backend.Api.Models;
+using ChatWebApp.DTOs;
+using ChatWebApp.Models;
 
-namespace Backend.Api.Helpers
+namespace ChatWebApp.Helpers
 {
     public class MapperProfile:Profile
     {

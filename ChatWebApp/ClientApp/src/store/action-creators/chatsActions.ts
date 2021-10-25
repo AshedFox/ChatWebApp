@@ -12,7 +12,7 @@ const requestGet = (userId:string) => {
         dispatch({type: ChatsActionType.GetRequest});
         const headersInit = new Headers(authHeader());
 
-        let query = appSettings.api.baseUrl + `/chats?userId=${userId}`;
+        let query = appSettings.apiUrl + `/chats?userId=${userId}`;
 
         try {
             const response = await fetch(
@@ -39,7 +39,7 @@ const requestPost = (chatData:ChatDTO) => {
         const headersInit = new Headers(authHeader());
         headersInit.append("Content-Type", "application/json");
 
-        let query = appSettings.api.baseUrl + `/chats`;
+        let query = appSettings.apiUrl + `/chats`;
         try {
             const response = await fetch(
                 query,
@@ -67,7 +67,7 @@ const requestSearch = (pattern:string) => {
     return async (dispatch: Dispatch<ChatsAction>) => {
         dispatch({type: ChatsActionType.SearchRequest});
         const headersInit = new Headers(authHeader());
-        let query = appSettings.api.baseUrl + `/chats/search?pattern=${pattern}`;
+        let query = appSettings.apiUrl + `/chats/search?pattern=${pattern}`;
 
         try {
             const response = await fetch(

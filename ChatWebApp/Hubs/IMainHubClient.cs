@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Backend.Api.DTOs;
-using Backend.Api.Models;
-using Microsoft.AspNetCore.SignalR;
+using ChatWebApp.DTOs;
 
-namespace Backend.Api.Hubs
+namespace ChatWebApp.Hubs
 {
     public interface IMainHubClient
     {

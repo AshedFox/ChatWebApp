@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Backend.Api.DTOs
+namespace ChatWebApp.DTOs
 {
     public record FileDto(Guid Id, string Name, string Path,
         string ContentType);

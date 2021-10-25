@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 
-namespace Backend.Api.Models
+namespace ChatWebApp.Models
 {
     public class User
     {

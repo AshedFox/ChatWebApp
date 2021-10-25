@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using AutoMapper;
-using Backend.Api.Data;
-using Backend.Api.DTOs;
-using Backend.Api.Models;
+using ChatWebApp.Data;
+using ChatWebApp.DTOs;
+using ChatWebApp.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Backend.Api.Controllers
+namespace ChatWebApp.Controllers
 {
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     [ApiController]
     [Authorize]
     public class ChatsController : ControllerBase

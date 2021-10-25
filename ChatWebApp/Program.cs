@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace Backend.Api
+namespace ChatWebApp
 {
     public class Program
     {

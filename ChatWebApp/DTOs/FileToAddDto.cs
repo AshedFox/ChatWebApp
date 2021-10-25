@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Backend.Api.DTOs
+﻿namespace ChatWebApp.DTOs
 {
     public record FileToAddDto(string Name, string Path,
         string ContentType);

@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 using AutoMapper;
-using Backend.Api.Data;
-using Backend.Api.DTOs;
+using ChatWebApp.Data;
+using ChatWebApp.DTOs;
 using CloudinaryDotNet;
 using CloudinaryDotNet.Actions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Backend.Api.Controllers
+namespace ChatWebApp.Controllers
 {
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     [ApiController]
     [Authorize]
     public class FilesController : ControllerBase
